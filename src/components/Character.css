@@ -1,0 +1,9 @@
+.character:hover { 
+  transform: scale(1.1); 
+}
+
+.character{
+  height: 20%;
+  width: 10%;
+  position: absolute;
+}

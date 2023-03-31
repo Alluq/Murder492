@@ -1,0 +1,11 @@
+.phone{
+  position: absolute;
+  height: 10%;
+  width: 5%;
+  bottom: 5%;
+  right: 5%;
+}
+
+.phone:hover { 
+  transform: scale(1.1); 
+}

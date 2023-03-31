@@ -1,27 +1,26 @@
 import React, { useState } from 'react';
-import "./Character.css"
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import PhoneBase from "../assets/PhoneBase.png"
+import "./Phone.css"
 
-function Character(input){
-  let props = input.props
-
-  const [show, setShow] = useState(false);
-
+function Phone(props){
+  const [show, setShow] = useState(false)
+  
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
   return(
     <div>
-      <img src={props.image} className={"character" + " " + props.name} alt="character" onClick={handleShow}/>
+      <img src={PhoneBase} className={"phone"} alt="phone" onClick={handleShow}/>
       <Modal show={show} onHide={handleClose} backdrop="static">
         <Modal.Header closeButton>
-          <Modal.Title>{props.title}</Modal.Title>
+          <Modal.Title>Phone Screen</Modal.Title>
         </Modal.Header>
-        <Modal.Body>{props.dialog}</Modal.Body>
+        <Modal.Body>What are we trynna do here</Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
-            Close
+            Close Phone
           </Button>
         </Modal.Footer>
       </Modal>
@@ -29,4 +28,4 @@ function Character(input){
   )
 }
 
-export default Character
+export default Phone

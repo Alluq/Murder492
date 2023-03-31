@@ -3,7 +3,68 @@
 }
 
 .character{
+  position: absolute;
+}
+
+.allen{
   height: 20%;
   width: 10%;
-  position: absolute;
+  top: 70%;
+  left: 65%;
+}
+
+.thomas{
+  height: 20%;
+  width: 10%;
+  top: 75%;
+  left: 22%;
+}
+
+.mary{
+  height: 20%;
+  width: 10%;
+  top: 62%;
+  left: 45%;
+}
+
+.police{
+  height: 20%;
+  width: 10%;
+  top: 67%;
+  left: 72%;
+}
+
+.camera{
+  height: 10%;
+  width: 10%;
+  top: 20%;
+  right: 0.5%;
+}
+
+.trash{
+  height: 15%;
+  width: 7.5%;
+  top: 75%;
+  left: 58%;
+}
+
+.footprint{
+  height: 18%;
+  width: 9%;
+  top: 80%;
+  left: 30%;
+}
+
+.wallet{
+  height: 12%;
+  width: 8%;
+  top: 86%;
+  left: 20%;
+}
+
+.ambulance{
+  height: 30%;
+  width: 30%;
+  top: 60%;
+  left: -10%;
 }

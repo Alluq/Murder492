@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import PhoneBase from "../assets/PhoneBase.png"
+import PhoneBase from "../assets/phone_app_assets/phone_screen_with_phone.png"
+import CrimebotAppIcon from "../assets/phone_app_assets/crimebot_app_icon.png"
+import CrimeSketchIcon from "../assets/phone_app_assets/crimesketch_app_icon.png"
 import "./Phone.css"
 
 function Phone(props){
@@ -13,7 +15,8 @@ function Phone(props){
   return(
     <div>
       <img src={PhoneBase} className={"phone"} alt="phone" onClick={handleShow}/>
-      <Modal show={show} onHide={handleClose} backdrop="static">
+      <img src={CrimebotAppIcon} className={"phone"} alt="phone" onClick={handleShow}/>
+      {/* <Modal show={show} onHide={handleClose} backdrop="static">
         <Modal.Header closeButton>
           <Modal.Title>Phone Screen</Modal.Title>
         </Modal.Header>
@@ -23,7 +26,7 @@ function Phone(props){
             Close Phone
           </Button>
         </Modal.Footer>
-      </Modal>
+      </Modal> */}
     </div>
   )
 }

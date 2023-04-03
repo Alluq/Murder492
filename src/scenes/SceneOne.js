@@ -11,6 +11,7 @@ import Camera from "../assets/camera.png"
 import FootPrint from "../assets/footprints.png"
 import Wallet from "../assets/wallet.png"
 import Sweater from "../assets/sweater.png"
+import Phone from "../components/Phone";
 
 import AllenOne from "../assets/scene1_dialog_assets/scene1_allen_dialog1.png"
 import AllenTwo from "../assets/scene1_dialog_assets/scene1_allen_dialog2.png"
@@ -109,6 +110,7 @@ function SceneOne(props){
       <Character props={footProps}></Character>
       <Character props={walletProps}></Character>
       <Character props={sweaterProps}></Character>
+      <Phone></Phone>
     </div>
   )
 }

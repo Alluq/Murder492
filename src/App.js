@@ -1,15 +1,16 @@
 import './App.css';
-import SceneOne from "./scenes/SceneOne"
-import Phone from "./components/Phone"
+import React from 'react'
+import Home from "./Home"
+import SceneProvider from "./context/SceneProvider"
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
-    <div>
-      <SceneOne></SceneOne>
-      <Phone></Phone>
-    </div>
-
+    <>
+      <SceneProvider>
+        <Home></Home>
+      </SceneProvider>
+    </>
   );
 }
 

@@ -14,7 +14,6 @@ function Home() {
   return (
     <div>
       {currentScene}
-      <Phone></Phone>
     </div>
   );
 }

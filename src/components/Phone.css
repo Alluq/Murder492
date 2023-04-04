@@ -1,11 +1,89 @@
 .phone{
   position: absolute;
-  height: 10%;
-  width: 5%;
-  bottom: 5%;
-  right: 5%;
+  height: 50%;
+  width: 25%;
+  bottom: 0%;
+  right: 3%;
 }
 
-.phone:hover { 
+#dna-analyser-icon{
+  position: absolute;
+  height: 11%;
+  width: 5%;
+  bottom: 27%;
+  right: 20%;
+}
+
+#facial-recog-icon{
+  position: absolute;
+  height: 11%;
+  width: 5%;
+  bottom: 27%;
+  right: 13%;
+}
+
+#crimebot-icon{
+  position: absolute;
+  height: 11%;
+  width: 5%;
+  bottom: 27%;
+  right: 6%;
+}
+
+#forensics-icon{
+  position: absolute;
+  height: 11%;
+  width: 5%;
+  bottom: 13%;
+  right: 20%;
+}
+
+#crime-sketch-icon{
+  position: absolute;
+  height: 11%;
+  width: 5%;
+  bottom: 13%;
+  right: 13%;
+}
+
+#hacker-app-icon{
+  position: absolute;
+  height: 11%;
+  width: 5%;
+  bottom: 13%;
+  right: 6%;
+}
+
+#profiles-icon{
+  position: absolute;
+  height: 11%;
+  width: 5%;
+  bottom: 1%;
+  right: 20%;
+}
+
+.button:hover { 
   transform: scale(1.1); 
+}
+
+
+.hidden{
+  display: none;
+}
+
+.back-button{
+  position: absolute;
+  height: 8%;
+  width: 11%;
+  bottom: 2%;
+  right: 10%;
+}
+
+.inactive {
+  animation: phoneDown 6s linear 2s;
+}
+
+@keyframes phoneDown {
+  from {transform: translateY(0%);}
+  to {transform: translateY(-20%);}
 }

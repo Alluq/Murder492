@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   return (
     <>
-      <SceneProvider>
+      <SceneProvider  >
         <Home></Home>
       </SceneProvider>
     </>

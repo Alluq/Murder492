@@ -1,7 +1,7 @@
 import Character from "../components/Character"
 import Allen from "../assets/allen.png"
 import Ambulance from "../assets/ambulence.png"
-import React from "react";
+import React, { useEffect, useState } from "react";
 import SceneBackground from "../assets/scene1.png"
 import Thomas from "../assets/thomas.png"
 import Mary from "../assets/mary.png"
@@ -11,6 +11,7 @@ import Camera from "../assets/camera.png"
 import FootPrint from "../assets/footprints.png"
 import Wallet from "../assets/wallet.png"
 import Sweater from "../assets/sweater.png"
+import Phone from "../components/Phone";
 
 import AllenOne from "../assets/scene1_dialog_assets/scene1_allen_dialog1.png"
 import AllenTwo from "../assets/scene1_dialog_assets/scene1_allen_dialog2.png"
@@ -87,7 +88,24 @@ const sweaterProps = {
   name: "sweater"
 }
 
+
 function SceneOne(props){
+  const [phoneActive, setPhoneActive] = useState({phoneActive: false})
+
+  useEffect(() => { 
+    const keyHandler = (event) => {
+      if(event.key == "m"){
+        setPhoneActive(!phoneActive)
+        console.log(phoneActive)
+      }
+    }
+
+    document.addEventListener('keydown', keyHandler)
+    return function cleanup() {
+      document.removeEventListener('keydown', keyHandler);
+    }
+  }, [phoneActive])
+  
   return(
     <div class="bg-container" style={{  
       backgroundImage: "url(" + SceneBackground + ")",
@@ -109,6 +127,7 @@ function SceneOne(props){
       <Character props={footProps}></Character>
       <Character props={walletProps}></Character>
       <Character props={sweaterProps}></Character>
+      <Phone active={phoneActive}></Phone>
     </div>
   )
 }

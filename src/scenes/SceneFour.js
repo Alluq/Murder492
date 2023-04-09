@@ -96,7 +96,6 @@ function SceneFour(){
           </div>
         ) : (
           <div>
-            <NextScene></NextScene>
             <img src={Ending} className="ending" />
             <img src={TryAgainImage} className="try-again nextButton" onClick={() => setSceneCounter(0)}/>
             <img src={MoreInfoImage} className="more-info nextButton" onClick={() => setSceneCounter(sceneCounter + 1)}/>

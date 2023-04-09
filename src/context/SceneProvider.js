@@ -5,7 +5,7 @@ export const sceneContext = createContext();
 
 const SceneProvider = (props) => {
         // this state will be shared with all components 
-    const [sceneCounter, setSceneCounter] = useState(2);
+    const [sceneCounter, setSceneCounter] = useState(3);
 
     return (
                 // this is the provider providing state

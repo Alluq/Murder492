@@ -1,7 +1,7 @@
 import Character from "../components/Character"
 import Allen from "../assets/avatars/allen.png"
 import Ambulance from "../assets/scene_1_assets/ambulence.png"
-import React, { useEffect, useState } from "react";
+import React from "react"
 import SceneBackground from "../assets/scene1.png"
 import Thomas from "../assets/avatars/thomas.png"
 import Mary from "../assets/avatars/mary.png"
@@ -11,7 +11,9 @@ import Camera from "../assets/scene_1_assets/camera.png"
 import FootPrint from "../assets/scene_1_assets/footprints.png"
 import Wallet from "../assets/scene_1_assets/wallet.png"
 import Sweater from "../assets/scene_1_assets/sweater.png"
-import Phone from "../components/Phone";
+import NextScene from "../components/NextScene"
+
+
 
 import AllenOne from "../assets/scene1_dialog_assets/scene1_allen_dialog1.png"
 import AllenTwo from "../assets/scene1_dialog_assets/scene1_allen_dialog2.png"
@@ -31,81 +33,67 @@ import WalletDialog from "../assets/scene1_dialog_assets/scene1_wallet_phone_dia
 const allenProps = {
   image: Allen, //Image
   dialogs: [AllenOne, AllenTwo],
-  name: "allen" //Used for css position
+  name: "allen1" //Used for css position
 }
 
 const ambulanceProps = {
   image: Ambulance,
   dialogs: [AmbulanceOne, AmbulanceTwo],
-  name: "ambulance"
+  name: "ambulance1"
 }
 
 const thomasProps = {
   image: Thomas,
   dialogs: [Body],
-  name: "thomas"
+  name: "thomas1"
 }
 
 const maryProps = {
   image: Mary,
   dialogs: [MaryOne, MaryTwo],
-  name: "mary"
+  name: "mary1"
 }
 
 const policeProps = {
   image: Police,
   dialogs: [PoliceOne, PoliceTwo],
-  name: "police"
+  name: "police1"
 }
 
 const trashProps = {
   image: Trash,
   dialogs: [TrashDialog],
-  name: "trash"
+  name: "trash1"
 }
 
 const cameraProps = {
   image: Camera,
   dialogs: [CCTV],
-  name: "camera"
+  name: "camera1"
 }
 
 const footProps = {
   image: FootPrint, //Image
   dialogs: [FootPrintDialog],
-  name: "footprint" //Used for css position
+  name: "footprint1" //Used for css position
 }
 
 const walletProps = {
   image: Wallet, //Image
   dialogs: [WalletDialog],
-  name: "wallet" //Used for css position
+  name: "wallet1" //Used for css position
 }
 
 const sweaterProps = {
   image: Sweater,
   dialogs: [SweaterDialog],
-  name: "sweater"
+  name: "sweater1"
 }
 
 
 function SceneOne(props){
-  const [phoneActive, setPhoneActive] = useState({phoneActive: false})
 
-  useEffect(() => { 
-    const keyHandler = (event) => {
-      if(event.key == "m"){
-        setPhoneActive(!phoneActive)
-        console.log(phoneActive)
-      }
-    }
 
-    document.addEventListener('keydown', keyHandler)
-    return function cleanup() {
-      document.removeEventListener('keydown', keyHandler);
-    }
-  }, [phoneActive])
-  
   return(
     <div class="bg-container" style={{  
       backgroundImage: "url(" + SceneBackground + ")",
@@ -117,6 +105,7 @@ function SceneOne(props){
       justifyContent: "center",
       alignItems: "center",
     }}>
+      <NextScene></NextScene>
       <Character props={allenProps}></Character>
       <Character props={ambulanceProps}></Character>
       <Character props={thomasProps}></Character>
@@ -127,7 +116,6 @@ function SceneOne(props){
       <Character props={footProps}></Character>
       <Character props={walletProps}></Character>
       <Character props={sweaterProps}></Character>
-      <Phone active={phoneActive}></Phone>
     </div>
   )
 }

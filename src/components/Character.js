@@ -1,5 +1,7 @@
 import React, {useState, useMemo } from 'react';
 import "./Character.css"
+import "./SceneOne.css"
+import "./SceneTwo.css"
 import NextImage from "../assets/next_button.png"
 
 function Character(input){

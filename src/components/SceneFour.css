@@ -1,0 +1,17 @@
+.mary{
+  height: 40%;
+  width: 14%;
+  top: 25%;
+  left: 10%;
+  position: absolute;
+  z-index: 2;
+}
+
+.mary-shadow{
+  height: 44%;
+  width: 16%;
+  top: 23%;
+  left: 9%;
+  position: absolute;
+  z-index: 1;
+}

@@ -15,6 +15,7 @@ import CrimeSketchScreen from "../assets/phone_app_assets/crimesketch_with_phone
 import CrimeBotScreen from "../assets/phone_app_assets/crimebot_with_phone.png"
 import NextButton from "../assets/next_button.png"
 import "./CrimePhone.css"
+import ProfilesApp from "./ProfilesApp"
 
 import BotOne from "../assets/scene3_assets/scene3_crimebot1.png"
 import BotTwo from "../assets/scene3_assets/scene3_crimebot2.png"
@@ -73,6 +74,7 @@ function CrimePhone(){
       <InternalApp icon={HackerAppIcon} iconId={"crime-hacker-app-icon"}  dialogs={HackerDialog} isHomeScreen={isHomeScreen} setIsHomeScreen={setIsHomeScreen}/>
       <InternalApp icon={DNAAnalysisIcon} iconId={"crime-dna-analyser-icon"}  dialogs={DNADialog} isHomeScreen={isHomeScreen} setIsHomeScreen={setIsHomeScreen}/>
       <InternalApp icon={FacialRecogIcon} iconId={"crime-facial-recog-icon"} dialogs={FRDialog} isHomeScreen={isHomeScreen} setIsHomeScreen={setIsHomeScreen}/>
+      <ProfilesApp isHomeScreen={isHomeScreen} setIsHomeScreen={setIsHomeScreen} isEarly={false}/>
     </div>
   )
 }
@@ -98,7 +100,7 @@ function InternalApp({icon, iconId, dialogs, isHomeScreen, setIsHomeScreen}){
   }
   return (
     <>
-      <img className={isHomeScreen ? "button" : "hidden"} src={icon} id={iconId} alt={iconId} onClick={() => {
+      <img className={isHomeScreen ? "crime-button" : "hidden"} src={icon} id={iconId} alt={iconId} onClick={() => {
         setActive(true)
         setIsHomeScreen(false)
       }}/>
@@ -106,9 +108,9 @@ function InternalApp({icon, iconId, dialogs, isHomeScreen, setIsHomeScreen}){
         <img src={currentDialog}className={"crime-phone"} ></img>
         {
           (dialogCounter !== currentDialogs.length-1) ? (
-            <img src={NextButton} className={"button"} onClick={incrementDialogue}></img>
+            <img src={NextButton} className={"crime-button"} onClick={incrementDialogue}></img>
           ) : (
-          <img src={BackButton} className={"button"} onClick={handleClose}/>
+          <img src={BackButton} className={"crime-button"} onClick={handleClose}/>
           )
         }
       </div>

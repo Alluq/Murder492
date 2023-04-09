@@ -54,18 +54,25 @@
   right: 38%;
 }
 
-.button:hover { 
+#crime-profiles-icon{
+  position: absolute;
+  height: 16%;
+  width: 7%;
+  bottom: 5%;
+  right: 48%;
+}
+
+.crime-button:hover { 
   transform: scale(1.1); 
 }
 
-.button{
+.crime-button{
   position: absolute;
   height: 8%;
   width: 11%;
-  bottom: 5%;
-  right: 45%;
+  bottom: 3%;
+  right: 46%;
 }
-
 
 .hidden{
   display: none;

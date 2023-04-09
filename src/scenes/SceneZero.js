@@ -17,7 +17,6 @@ function SceneZero(props){
 
   const incrementDialogue = () => {
     setDialogCounter(dialogCounter+1)
-    console.log(dialogCounter)
     if(dialogCounter === 4){
       setSceneCounter(sceneCounter+1)
     }

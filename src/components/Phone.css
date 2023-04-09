@@ -80,10 +80,5 @@
 }
 
 .inactive {
-  animation: phoneDown 6s linear 2s;
-}
-
-@keyframes phoneDown {
-  from {transform: translateY(0%);}
-  to {transform: translateY(-20%);}
+  display: none;
 }

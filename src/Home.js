@@ -1,6 +1,7 @@
 import SceneZero from "./scenes/SceneZero"
 import SceneOne from "./scenes/SceneOne"
 import SceneTwo from "./scenes/SceneTwo"
+import SceneThree from "./scenes/SceneThree"
 import Phone from "./components/Phone"
 import React, { useContext, useMemo, useEffect, useState} from 'react'
 import { sceneContext } from "./context/SceneProvider";
@@ -9,13 +10,13 @@ function Home() {
   const sceneCounter = useContext(sceneContext)[0]
   const [phoneActive, setPhoneActive] = useState(false)
 
-  const scenes = useMemo(()=>[<SceneZero></SceneZero>, <SceneOne></SceneOne>, <SceneTwo></SceneTwo>], [])
+  const scenes = useMemo(()=>[<SceneZero></SceneZero>, <SceneOne></SceneOne>, <SceneTwo></SceneTwo>, <SceneThree></SceneThree>], [])
 
   const currentScene = scenes[sceneCounter]
 
   useEffect(() => { 
     const keyHandler = (event) => {
-      if(event.key == "m"){
+      if(event.key == "m" && (sceneCounter == 1 || sceneCounter == 2)){
         setPhoneActive(!phoneActive)
         console.log(phoneActive)
       }

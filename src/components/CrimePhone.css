@@ -1,0 +1,72 @@
+.crime-phone{
+  position: absolute;
+  height: 80%;
+  width: 35%;
+  bottom: 0%;
+  right: 34%;
+}
+
+#crime-dna-analyser-icon{
+  position: absolute;
+  height: 16%;
+  width: 7%;
+  bottom: 45%;
+  right: 58%;
+}
+
+#crime-facial-recog-icon{
+  position: absolute;
+  height: 16%;
+  width: 7%;
+  bottom: 45%;
+  right: 48%;
+}
+
+#crime-crimebot-icon{
+  position: absolute;
+  height: 16%;
+  width: 7%;
+  bottom: 45%;
+  right: 38%;
+}
+
+#crime-forensics-icon{
+  position: absolute;
+  height: 16%;
+  width: 7%;
+  bottom: 25%;
+  right: 58%;
+}
+
+#crime-crime-sketch-icon{
+  position: absolute;
+  height: 16%;
+  width: 7%;
+  bottom: 25%;
+  right: 48%;
+}
+
+#crime-hacker-app-icon{
+  position: absolute;
+  height: 16%;
+  width: 7%;
+  bottom: 25%;
+  right: 38%;
+}
+
+.button:hover { 
+  transform: scale(1.1); 
+}
+
+.button{
+  position: absolute;
+  height: 8%;
+  width: 11%;
+  bottom: 5%;
+  right: 45%;
+}
+
+
+.hidden{
+  display: none;
+}

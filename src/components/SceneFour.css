@@ -2,16 +2,139 @@
   height: 40%;
   width: 14%;
   top: 25%;
-  left: 10%;
+  left: 5%;
   position: absolute;
   z-index: 2;
 }
 
-.mary-shadow{
+#mary-shadow{
   height: 44%;
   width: 16%;
   top: 23%;
-  left: 9%;
+  left: 4%;
   position: absolute;
   z-index: 1;
+}
+
+.steve{
+  height: 40%;
+  width: 14%;
+  top: 25%;
+  left: 20%;
+  position: absolute;
+  z-index: 2;
+}
+
+#steve-shadow{
+  height: 37%;
+  width: 16%;
+  top: 27%;
+  left: 19%;
+  position: absolute;
+  z-index: 1;
+}
+
+.jenny{
+  height: 40%;
+  width: 14%;
+  top: 25%;
+  left: 35%;
+  position: absolute;
+  z-index: 2;
+}
+
+#jenny-shadow{
+  height: 43%;
+  width: 16%;
+  top: 24%;
+  left: 34%;
+  position: absolute;
+  z-index: 1;
+}
+
+.greg{
+  height: 40%;
+  width: 14%;
+  top: 25%;
+  left: 50%;
+  position: absolute;
+  z-index: 2;
+}
+
+#greg-shadow{
+  height: 38%;
+  width: 16%;
+  top: 26%;
+  left: 49%;
+  position: absolute;
+  z-index: 1;
+}
+
+.allen{
+  height: 40%;
+  width: 14%;
+  top: 25%;
+  left: 65%;
+  position: absolute;
+  z-index: 2;
+}
+
+#allen-shadow{
+  height: 36%;
+  width: 16%;
+  top: 27%;
+  left: 64%;
+  position: absolute;
+  z-index: 1;
+}
+
+.william{
+  height: 40%;
+  width: 14%;
+  top: 25%;
+  left: 80%;
+  position: absolute;
+  z-index: 2;
+}
+
+#william-shadow{
+  height: 43%;
+  width: 16%;
+  top: 23.5%;
+  left: 79%;
+  position: absolute;
+  z-index: 1;
+}
+
+
+.active {
+  visibility: visible;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.ending {
+  position: absolute;
+  top: -100%;
+  bottom: -100%;
+  left: -100%;
+  right: -100%;
+  margin: auto;
+  z-index: 0;
+}
+
+.try-again {
+  z-index: 20;
+  position: absolute;
+  bottom: 10%;
+  left: -40%;
+}
+
+.more-info {
+  z-index: 20;
+  position: absolute;
+  bottom: 10%;
+  left: 35%;
 }

@@ -1,3 +1,4 @@
+import BackgroundImage from "../assets/scene5_assets/scene5_bg.png"
 import Dialogue1 from "../assets/scene5_assets/scene5_1.png"
 import Dialogue2 from "../assets/scene5_assets/scene5_2.png"
 import Dialogue3 from "../assets/scene5_assets/scene5_3.png"
@@ -33,6 +34,14 @@ function SceneFive(props){
 
   return(
     <div class="bg-container" style={{  
+      backgroundImage: "url(" + BackgroundImage + ")",
+      backgroundPosition: 'center',
+      backgroundSize: 'cover',
+      backgroundRepeat: 'no-repeat',
+      height: "100vh",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
     }}>
       <div>
       <img src={currentDialog} className="dialog" alt="something"/>

@@ -115,13 +115,14 @@
   visibility: hidden;
 }
 
-.ending {
+.dialog {
   position: absolute;
   top: -100%;
   bottom: -100%;
   left: -100%;
   right: -100%;
   margin: auto;
+  width: 100vw;
   z-index: 0;
 }
 

@@ -19,9 +19,8 @@ function Home() {
 
   useEffect(() => { 
     const keyHandler = (event) => {
-      if(event.key == "m" && (sceneCounter == 1 || sceneCounter == 2)){
+      if(event.key === "m"){
         setPhoneActive(!phoneActive)
-        console.log(phoneActive)
       }
     }
 

@@ -28,7 +28,8 @@ import { sceneContext } from "../context/SceneProvider"
 import { useContext } from "react"
 
 import "../components/SceneFour.css"
-
+import InitialDialog from "../assets/scene4_assets/scene4_beginning.png"
+import NextImage from "../assets/next_button.png"
 
 const Endings = {
   "allen" : AllenEnding,
@@ -67,10 +68,15 @@ function Suspect({char, shadow, name, selectSuspect, suspect}){
 function SceneFour(){
   const [suspect, selectSuspect] = useState("")
   const [lockIn, setLockIn] = useState(false)
+  const [chooseState, setStage] = useState(false)
 
   const Ending = Endings[suspect]
 
   const [sceneCounter, setSceneCounter] = useContext(sceneContext)
+
+  const incrementChoice = () => {
+    setStage(true)
+  }
   
   return(
     <div class="bg-container" style={{  
@@ -84,32 +90,38 @@ function SceneFour(){
       alignItems: "center",
     }}>
       {
-        (suspect === "" || !lockIn) ? (
-          <div>
-            <Suspect char={Mary} shadow={MaryShadow} name={"mary"} selectSuspect={selectSuspect} suspect={suspect}></Suspect>
-            <Suspect char={Steve} shadow={SteveShadow} name={"steve"} selectSuspect={selectSuspect} suspect={suspect}></Suspect>
-            <Suspect char={Jenny} shadow={JennyShadow} name={"jenny"} selectSuspect={selectSuspect} suspect={suspect}></Suspect>
-            <Suspect char={Greg} shadow={GregShadow} name={"greg"} selectSuspect={selectSuspect} suspect={suspect}></Suspect>
-            <Suspect char={Allen} shadow={AllenShadow} name={"allen"} selectSuspect={selectSuspect} suspect={suspect}></Suspect>
-            <Suspect char={William} shadow={WilliamShadow} name={"william"} selectSuspect={selectSuspect} suspect={suspect}></Suspect>
-            <img src={SelectImage} className="nextButton" onClick={() => setLockIn(true)} alt={"select"}/>
-          </div>
-        ) : (
-          (suspect === "william") ? (
+        (!chooseState) ? (
+          <>
+          <img src={InitialDialog} className="dialog" alt="something"></img>
+          <img src={NextImage} className="nextButton" onClick={incrementChoice} alt="dialog"></img>
+          </>
+        ) :
+          (suspect === "" || !lockIn) ? (
             <div>
-              <img src={Ending} className="ending" alt={"select"}/>
-              <img src={RevealImage} className="try-again nextButton" onClick={() => setSceneCounter(sceneCounter+1)} alt={"select"}/>
-              <img src={MoreInfoImage} className="more-info nextButton" onClick={() => setSceneCounter(sceneCounter + 2)} alt={"select"}/>
+              <Suspect char={Mary} shadow={MaryShadow} name={"mary"} selectSuspect={selectSuspect} suspect={suspect}></Suspect>
+              <Suspect char={Steve} shadow={SteveShadow} name={"steve"} selectSuspect={selectSuspect} suspect={suspect}></Suspect>
+              <Suspect char={Jenny} shadow={JennyShadow} name={"jenny"} selectSuspect={selectSuspect} suspect={suspect}></Suspect>
+              <Suspect char={Greg} shadow={GregShadow} name={"greg"} selectSuspect={selectSuspect} suspect={suspect}></Suspect>
+              <Suspect char={Allen} shadow={AllenShadow} name={"allen"} selectSuspect={selectSuspect} suspect={suspect}></Suspect>
+              <Suspect char={William} shadow={WilliamShadow} name={"william"} selectSuspect={selectSuspect} suspect={suspect}></Suspect>
+              <img src={SelectImage} className="nextButton" onClick={() => setLockIn(true)} alt={"select"}/>
             </div>
           ) : (
-            <div>
-            <img src={Ending} className="ending" alt={"select"}/>
-            <img src={TryAgainImage} className="try-again nextButton" onClick={() => setSceneCounter(0)} alt={"select"}/>
-            <img src={MoreInfoImage} className="more-info nextButton" onClick={() => setSceneCounter(sceneCounter + 2)} alt={"select"}/>
-            </div>
-          ) 
-        )
-      }
+            (suspect === "william") ? (
+              <div>
+                <img src={Ending} className="dialog" alt={"select"}/>
+                <img src={RevealImage} className="try-again nextButton" onClick={() => setSceneCounter(sceneCounter+1)} alt={"select"}/>
+                <img src={MoreInfoImage} className="more-info nextButton" onClick={() => setSceneCounter(sceneCounter + 2)} alt={"select"}/>
+              </div>
+            ) : (
+              <div>
+              <img src={Ending} className="dialog" alt={"select"}/>
+              <img src={TryAgainImage} className="try-again nextButton" onClick={() => setSceneCounter(0)} alt={"select"}/>
+              <img src={MoreInfoImage} className="more-info nextButton" onClick={() => setSceneCounter(sceneCounter + 2)} alt={"select"}/>
+              </div>
+            ) 
+          )
+        }
     </div>
   )
 }

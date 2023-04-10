@@ -1,4 +1,6 @@
 # Murder 492
+You can access the site at https://murder492.netlify.com
+
 ## Final Project for CS 492 (Social Implications of Computing)
 
 ## Groups Members: 

@@ -21,8 +21,23 @@ function SceneSix(props){
   }
 
   const dialogs = useMemo(() => [[ImageOne, ImageTwo], [ImageThree, ImageFour], [ImageFive, ImageSix]], [])
+  const links = useMemo(()=> [
+    [
+      "https://docs.google.com/document/d/1Hv2v_yrxK_kRHwTx36lHBIqtFCzLoPhMBIoFe31NQxg/edit#bookmark=id.8gy6rc92c57", 
+      "https://docs.google.com/document/d/1Hv2v_yrxK_kRHwTx36lHBIqtFCzLoPhMBIoFe31NQxg/edit#bookmark=id.bg3e51ginrvc"
+    ],
+    [
+      "https://docs.google.com/document/d/1Hv2v_yrxK_kRHwTx36lHBIqtFCzLoPhMBIoFe31NQxg/edit#bookmark=id.edunhtkvzx85",
+      "https://docs.google.com/document/d/1Hv2v_yrxK_kRHwTx36lHBIqtFCzLoPhMBIoFe31NQxg/edit#bookmark=id.dc8hcx7qhtqr"
+    ],
+    [
+      "https://docs.google.com/document/d/1Hv2v_yrxK_kRHwTx36lHBIqtFCzLoPhMBIoFe31NQxg/edit#bookmark=id.38tn8kftjty8",
+      "https://docs.google.com/document/d/1Hv2v_yrxK_kRHwTx36lHBIqtFCzLoPhMBIoFe31NQxg/edit#bookmark=id.khiopixxtbr"
+    ]
+  ], [])
 
   const currentDialog = dialogs[dialogCounter]
+  const currentLink = links[dialogCounter]
   
   return(
     <div class="bg-container" style={{  
@@ -35,8 +50,13 @@ function SceneSix(props){
       justifyContent: "center",
       alignItems: "center",
     }}>
-      <img src={currentDialog[0]} className={"firstImage"}></img>
+      <a href={currentLink[0]} target="_blank">
+        <img src={currentDialog[0]} className={"firstImage"}></img>
+      </a>
+
+      <a href={currentLink[1]} target="_blank">
       <img src={currentDialog[1]} className={"secondImage"}></img>
+      </a>
       {
         (dialogCounter != dialogs.length-1) ? (
           <img src={NextImage} className="goNextButton" onClick={incrementDialogue} alt="dialog"></img>

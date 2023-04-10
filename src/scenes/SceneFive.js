@@ -6,13 +6,13 @@ import Dialogue5 from "../assets/scene5_assets/scene5_5.png"
 import Dialogue6 from "../assets/scene5_assets/scene5_6.png"
 import Dialogue7 from "../assets/scene5_assets/scene5_7.png"
 import NextButtonImage from "../assets/next_button.png"
-import NextSceneImage from "../assets/next_scene.png"
+import MoreInfoImage from "../assets/scene4_assets/more_info_button.png"
 import "../components/Scene.css"
 import "../components/SceneFive.css"
 import { useContext, useState, useMemo } from "react"
 import { sceneContext } from "../context/SceneProvider"
 
-function SceneZero(props){
+function SceneFive(props){
 
   const [dialogCounter, setDialogCounter] = useState(0)
 
@@ -29,7 +29,7 @@ function SceneZero(props){
 
   const currentDialog = dialogs[dialogCounter]
 
-  const NextImage = dialogCounter == 6 ? NextSceneImage : NextButtonImage 
+  const NextImage = dialogCounter === 6 ? MoreInfoImage : NextButtonImage 
 
   return(
     <div class="bg-container" style={{  
@@ -44,4 +44,4 @@ function SceneZero(props){
   )
 }
 
-export default SceneZero
+export default SceneFive

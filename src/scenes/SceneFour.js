@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react"
+import React, {useState} from "react"
 import SceneBackground from "../assets/scene0_assets/scene0.png"
 import Allen from "../assets/scene4_assets/scene4_allen.png"
 import AllenShadow from "../assets/scene4_assets/scene4_allen_shadow.png"
@@ -12,10 +12,10 @@ import Steve from "../assets/scene4_assets/scene4_steve.png"
 import SteveShadow from "../assets/scene4_assets/scene4_steve_shadow.png"
 import William from "../assets/scene4_assets/scene4_william.png"
 import WilliamShadow from "../assets/scene4_assets/scene4_william_shadow.png"
-import NextScene from "../components/NextScene"
 import SelectImage from "../assets/scene4_assets/select_button.png"
 import TryAgainImage from "../assets/scene4_assets/try_again_button.png"
 import MoreInfoImage from "../assets/scene4_assets/more_info_button.png"
+import RevealImage from "../assets/scene4_assets/reveal_button.png"
 
 import AllenEnding from "../assets/scene4_assets/scene4_ending_allen_incorrect.png"
 import JennyEnding from "../assets/scene4_assets/scene4_ending_jenny_incorrect.png"
@@ -40,7 +40,7 @@ const Endings = {
 }
 
 function Suspect({char, shadow, name, selectSuspect, suspect}){
-  const [shadowOn, setShadow] = useState(suspect == name)
+  const [shadowOn, setShadow] = useState(suspect === name)
 
 
   const addShadow = () => {
@@ -58,8 +58,8 @@ function Suspect({char, shadow, name, selectSuspect, suspect}){
 
   return(
     <>
-      <img src={char} onMouseOver={addShadow} onMouseOut={removeShadow} onClick={chooseSuspect} className={name}></img>
-      <img src={shadow} id={name+"-shadow"} className={suspect == name || (shadowOn && suspect != name) ? "active" : "hidden"}></img>
+      <img src={char} onMouseOver={addShadow} onMouseOut={removeShadow} onClick={chooseSuspect} className={name} alt={name}></img>
+      <img src={shadow} id={name+"-shadow"} className={suspect === name || (shadowOn && suspect !== name) ? "active" : "hidden"} alt={name}></img>
     </>
   )
 }
@@ -92,14 +92,22 @@ function SceneFour(){
             <Suspect char={Greg} shadow={GregShadow} name={"greg"} selectSuspect={selectSuspect} suspect={suspect}></Suspect>
             <Suspect char={Allen} shadow={AllenShadow} name={"allen"} selectSuspect={selectSuspect} suspect={suspect}></Suspect>
             <Suspect char={William} shadow={WilliamShadow} name={"william"} selectSuspect={selectSuspect} suspect={suspect}></Suspect>
-            <img src={SelectImage} className="nextButton" onClick={() => setLockIn(true)} />
+            <img src={SelectImage} className="nextButton" onClick={() => setLockIn(true)} alt={"select"}/>
           </div>
         ) : (
-          <div>
-            <img src={Ending} className="ending" />
-            <img src={TryAgainImage} className="try-again nextButton" onClick={() => setSceneCounter(0)}/>
-            <img src={MoreInfoImage} className="more-info nextButton" onClick={() => setSceneCounter(sceneCounter + 1)}/>
-          </div>
+          (suspect === "william") ? (
+            <div>
+              <img src={Ending} className="ending" alt={"select"}/>
+              <img src={RevealImage} className="try-again nextButton" onClick={() => setSceneCounter(sceneCounter+1)} alt={"select"}/>
+              <img src={MoreInfoImage} className="more-info nextButton" onClick={() => setSceneCounter(sceneCounter + 2)} alt={"select"}/>
+            </div>
+          ) : (
+            <div>
+            <img src={Ending} className="ending" alt={"select"}/>
+            <img src={TryAgainImage} className="try-again nextButton" onClick={() => setSceneCounter(0)} alt={"select"}/>
+            <img src={MoreInfoImage} className="more-info nextButton" onClick={() => setSceneCounter(sceneCounter + 2)} alt={"select"}/>
+            </div>
+          ) 
         )
       }
     </div>

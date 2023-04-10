@@ -3,7 +3,8 @@ import SceneOne from "./scenes/SceneOne"
 import SceneTwo from "./scenes/SceneTwo"
 import SceneThree from "./scenes/SceneThree"
 import SceneFive from "./scenes/SceneFive"
-import SceneFour from "./scenes/SceneFour" 
+import SceneFour from "./scenes/SceneFour"
+import SceneSix from "./scenes/SceneSix" 
 import Phone from "./components/Phone"
 import React, { useContext, useMemo, useEffect, useState} from 'react'
 import { sceneContext } from "./context/SceneProvider";
@@ -12,7 +13,7 @@ function Home() {
   const sceneCounter = useContext(sceneContext)[0]
   const [phoneActive, setPhoneActive] = useState(false)
 
-  const scenes = useMemo(()=>[<SceneZero></SceneZero>, <SceneOne></SceneOne>, <SceneTwo></SceneTwo>, <SceneThree></SceneThree>, <SceneFour></SceneFour>, <SceneFive></SceneFive>], [])
+  const scenes = useMemo(()=>[<SceneZero></SceneZero>, <SceneOne></SceneOne>, <SceneTwo></SceneTwo>, <SceneThree></SceneThree>, <SceneFour></SceneFour>, <SceneFive></SceneFive>, <SceneSix></SceneSix>], [])
 
   const currentScene = scenes[sceneCounter]
 

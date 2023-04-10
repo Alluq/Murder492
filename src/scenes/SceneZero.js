@@ -19,6 +19,7 @@ function SceneZero(props){
     setDialogCounter(dialogCounter+1)
     if(dialogCounter === 4){
       setSceneCounter(sceneCounter+1)
+      console.log(sceneCounter)
     }
   }
 

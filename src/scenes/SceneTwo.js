@@ -34,6 +34,7 @@ import JennyFour from "../assets/scene2_dialog_assets/scene2_jenny_dialog4.png"
 import JennyFive from "../assets/scene2_dialog_assets/scene2_jenny_dialog5.png"
 import JennySix from "../assets/scene2_dialog_assets/scene2_jenny_dialog6.png"
 import JennySeven from "../assets/scene2_dialog_assets/scene2_jenny_dialog7.png"
+import JennyEight from "../assets/scene2_dialog_assets/scene2_jenny_dialog8.png"
 
 import MaryOne from "../assets/scene2_dialog_assets/scene2_mary_dialog1.png"
 import MaryTwo from "../assets/scene2_dialog_assets/scene2_mary_dialog2.png"
@@ -70,7 +71,7 @@ const gregProps = {
 
 const jennyProps = {
   image: Jenny,
-  dialogs: [JennyOne, JennyTwo, JennyThree, JennyFour, JennyFive, JennySix, JennySeven],
+  dialogs: [JennyOne, JennyTwo, JennyThree, JennyFour, JennyFive, JennySix, JennySeven, JennyEight],
   name: "jenny2"
 }
 

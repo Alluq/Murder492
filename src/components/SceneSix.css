@@ -1,7 +1,7 @@
 .referenceButton{
   position: absolute;
   top: 85%;
-  left: 41%;
+  left: 40%;
   height: 8%;
   width: 20%;
 }
@@ -9,9 +9,9 @@
 .goNextButton{
   position: absolute;
   top: 85%;
-  left: 44%;
+  left: 43.5%;
   height: 8%;
-  width: 14%;
+  width: 12%;
 }
 
 .referenceButton:hover{
@@ -25,9 +25,8 @@
 .firstImage{
   position: absolute;
   top: 5%;
-  left: 10%;
+  left: 11%;
   height: 75%;
-  width: 37.5%;
 }
 
 .secondImage{
@@ -35,5 +34,4 @@
   top: 5%;
   left: 55%;
   height: 75%;
-  width: 37.5%l
 }

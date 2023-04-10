@@ -10,8 +10,8 @@ Anne Hu, Allen Lu, Tom Tian
 ```npm install```
 ```npm start```
 
-## Submission Document
-https://docs.google.com/document/d/1Y31rRILnw4C82-jgpBd5bjQrEcgiNSEnQPjL4veQBoc/edit#
+## Research and Sources
+https://docs.google.com/document/d/1Hv2v_yrxK_kRHwTx36lHBIqtFCzLoPhMBIoFe31NQxg/edit#
 
 ## Video to Submission
 https://youtu.be/u4EKnV7zjVk

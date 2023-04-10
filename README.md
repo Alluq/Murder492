@@ -7,8 +7,8 @@ You can access the site at https://murder492.netlify.com
 Anne Hu, Allen Lu, Tom Tian
 
 ## To Run the code locally
-npm install
-npm start
+```npm install```
+```npm start```
 
 ## Submission Document
 https://docs.google.com/document/d/1Y31rRILnw4C82-jgpBd5bjQrEcgiNSEnQPjL4veQBoc/edit#

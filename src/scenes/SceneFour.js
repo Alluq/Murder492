@@ -109,13 +109,13 @@ function SceneFour(){
           ) : (
             (suspect === "william") ? (
               <div>
-                <img src={Ending} className="ending" alt={"select"}/>
+                <img src={Ending} className="dialog" alt={"select"}/>
                 <img src={RevealImage} className="try-again nextButton" onClick={() => setSceneCounter(sceneCounter+1)} alt={"select"}/>
                 <img src={MoreInfoImage} className="more-info nextButton" onClick={() => setSceneCounter(sceneCounter + 2)} alt={"select"}/>
               </div>
             ) : (
               <div>
-              <img src={Ending} className="ending" alt={"select"}/>
+              <img src={Ending} className="dialog" alt={"select"}/>
               <img src={TryAgainImage} className="try-again nextButton" onClick={() => setSceneCounter(0)} alt={"select"}/>
               <img src={MoreInfoImage} className="more-info nextButton" onClick={() => setSceneCounter(sceneCounter + 2)} alt={"select"}/>
               </div>

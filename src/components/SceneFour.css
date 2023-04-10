@@ -115,7 +115,7 @@
   visibility: hidden;
 }
 
-.ending {
+.dialog {
   position: absolute;
   top: -100%;
   bottom: -100%;
